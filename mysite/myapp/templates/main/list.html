@@ -1,0 +1,19 @@
+{% extends 'main\base.html' %}
+
+    {% block title %}
+    List
+    {% endblock %}
+
+    {% block content %}
+    <a href="/">HomePage</a>
+    <ul>
+    {% for item in tdos_all %}
+    <li>
+        <h1>{{ item.id }}  {{ item.name }}</h1>
+        {% for i in item.item_set.all %}
+            <h3>{{ i.text }}: {{ i.complete }}</h3>
+        {% endfor %}
+    </li>
+    {% endfor %}
+    </ul>
+    {% endblock %}

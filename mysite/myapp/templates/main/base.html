@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+    {% block title %}
+    Base
+    {% endblock %}
+    </title>
+</head>
+<body style="margin: 0px;">
+    <header style="background-color: #BBB9C6; padding: 3%;">
+        <h3>This is the Header</h3>
+    </header>
+
+    <div class="content" style="padding: 3%;">
+        {% block content %}
+        Base Template
+        {% endblock %}
+    </div>
+
+    <footer style="background-color: #BBB9C6; padding: 3%;">
+        <h3>This is The Footer</h3>
+    </footer>
+</body>
+</html>

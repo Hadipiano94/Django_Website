@@ -1,0 +1,28 @@
+{% extends 'main\base.html' %}
+
+    {% block title %}
+    Telephone Numbers
+    {% endblock %}
+
+    {% block content %}
+    <a href="/">HomePage</a>\<a href="/create/">Create-Contact</a>
+    <div style="padding: 3% 3% 3% 0%;">
+        <table>
+            <tr>
+                <th width="200px" align="left">Name</th>
+                <th width="200px" align="left">Tel.</th>
+            </tr>
+        {% for i in tels_list %}
+            <tr>
+            {% if i.name == last_tel %}
+                <td><strong>{{ i.name }}</strong></td>
+                <td><strong>{{ i.tel }}</strong></td>
+            {% else %}
+                <td>{{ i.name }}</td>
+                <td>{{ i.tel }}</td>
+            {% endif %}
+            </tr>
+        {% endfor %}
+        </table>
+    </div>
+    {% endblock %}
